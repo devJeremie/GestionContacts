@@ -9,22 +9,26 @@ use Symfony\Component\Routing\Annotation\Route;
 class AccueilController extends AbstractController
 {
     /**
-     * @Route("/accueil", name="app_accueil, methods={"GET"})
+     * @Route("/accueil", name="app_accueil", methods={"GET"})
      */
     public function index(): Response
     {
+       /* $nomsStudents=['Jérémie', 'Ousmane', 'Alexia', 'Chouaibou'];
+        $age =17;*/
         return $this->render('accueil/index.html.twig', [
-            'controller_name' => 'AccueilController',
+            /*'controller_name' => 'AccueilController',*/
+            /*'lesNoms' => $nomsStudents,
+            'age' => $age,*/
         ]);
     }
     /*création d'une seconde route vers le meme fichier*/
      /**
      * @Route("/contact", name="app_contact")
      */
-    public function contact(): Response
+   /* public function contact(): Response
     {
         return $this->render('accueil/index.html.twig', [
             'controller_name' => 'AccueilController',
         ]);
-    }
+    }*/
 }
