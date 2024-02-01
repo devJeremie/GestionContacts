@@ -13,7 +13,7 @@ class ContactController extends AbstractController
     /**
      * @Route("/contacts", name="contacts", methods={"GET"})
      */
-    public function listeContact(ContactRepository $repo): Response
+    public function listeContacts(ContactRepository $repo): Response
     {
         #{$manager = $this->getDoctrine()->getManager();#}
         #{$repo =  $manager->getRepository(Contact::class);#}

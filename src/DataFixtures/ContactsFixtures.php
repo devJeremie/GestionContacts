@@ -2,10 +2,11 @@
 
 namespace App\DataFixtures;
 
-use App\Entity\Contact;
-use Doctrine\Bundle\FixturesBundle\Fixture;
-use Doctrine\Persistence\ObjectManager;
 use Faker\Factory;
+use App\Entity\Contact;
+use App\Entity\Categorie;
+use Doctrine\Persistence\ObjectManager;
+use Doctrine\Bundle\FixturesBundle\Fixture;
 
 class ContactsFixtures extends Fixture
 {
@@ -14,6 +15,24 @@ class ContactsFixtures extends Fixture
         // $product = new Product();
         // $manager->persist($product);
         $faker = Factory::create("fr_FR");
+
+        $categorie = new Categorie();
+        $categorie ->setLibelle("Professionnel")
+                   ->setDescription($faker->sentence(50))
+                   ->setImage("https://picsum.photos/id/5/200/300");
+        $manager->persist($categorie);
+        $categorie = new Categorie();
+        $categorie ->setLibelle("Sport")
+                   ->setDescription($faker->sentence(50))
+                   ->setImage("https://picsum.photos/id/73/200/300");
+        $manager->persist($categorie);
+        $categorie = new Categorie();
+        $categorie ->setLibelle("Privé")
+                   ->setDescription($faker->sentence(50))
+                   ->setImage("https://picsum.photos/id/342/200/300");
+        $manager->persist($categorie);
+
+
         $genres = ["male", "female"];
        
 

@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des contacts{% endblock %}
+{% block title %}Fiche contact{% endblock %}
 
 {% block body %}
 <h1 class='text-center pt-2'>Fiche contact</h1>
@@ -21,8 +21,9 @@
                         <li class="list-group-item">
                             {% if leContact.sexe==0 %}
                                 <span>Homme</span>
-                            {% endif %}
+                            {% else %}
                                 <span>Femme</span>
+                            {% endif %}
                         </li>
                     </ul>
                 </div>
