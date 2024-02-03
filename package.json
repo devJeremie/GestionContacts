@@ -6,5 +6,8 @@
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.2",
     "jquery": "^3.7.1"
+  },
+  "scripts": {
+    "start": "npm run build && serve -s dist"
   }
 }

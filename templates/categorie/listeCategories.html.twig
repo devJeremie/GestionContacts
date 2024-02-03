@@ -12,7 +12,7 @@
             <h4 class="card-title text-center">
                 {{laCategorie.libelle}} 
             </h4>
-            <img style="display: block;" src="{{laCategorie.image}}" class="imageCategories mx-auto my-3" alt="image categorie">
+            <img style="display: block;" src="{{ asset(laCategorie.image)}}" class="imageCategories mx-auto my-3" alt="image categorie">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">{{laCategorie.description}}</li>
             </ul>
