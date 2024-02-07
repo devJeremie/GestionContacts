@@ -24,7 +24,7 @@
         <div class="row">
             {% for leContact in laCategorie.contacts %}
             <div class="col-sm-12 col-md-12 col-lg-4 col-xl-3">
-                {{ include('contact/_ficheContact.html.twig')}}
+                {{ include('contact/_ficheContact.html.twig', {'mode':'ficheCategorie'})}}
             </div>       
                 
             {% endfor %}
