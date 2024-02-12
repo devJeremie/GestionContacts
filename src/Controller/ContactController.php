@@ -18,6 +18,7 @@ class ContactController extends AbstractController
         #{$manager = $this->getDoctrine()->getManager();#}
         #{$repo =  $manager->getRepository(Contact::class);#}
         $Contacts = $repo->findAll();
+
        
         return $this->render('contact/listeContacts.html.twig', [
            /* 'controller_name' => 'ContactController',*/
@@ -26,7 +27,7 @@ class ContactController extends AbstractController
     }
 
      /**
-     * @Route("/contact/{id}", name="ficheContact", methods={"GET"})
+     * @Route("/contact/{id}", name="ficheContact", methods={"GET, POST"})
      */
     public function ficheContact( $id, ContactRepository $repo): Response
     {
