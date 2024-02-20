@@ -21,13 +21,15 @@ class CategorieController extends AbstractController
     }
 
      /**
-     * @Route("/categorie/{id}", name="ficheCategorie", methods={"GET"})
+     * @Route("/categorie/{id}/{prevCont?}" , name="ficheCategorie", methods={"GET"})
      */
-    public function ficheCategorie($id, CategorieRepository $repo): Response
+    public function ficheCategorie($id,$prevCont, CategorieRepository $repo): Response
     {
         $categorie = $repo->find($id);
+
         return $this->render('categorie/ficheCategorie.html.twig', [
-            'laCategorie' => $categorie
+            'laCategorie' => $categorie,
+            'prevCont' => $prevCont
         ]);
     }
 

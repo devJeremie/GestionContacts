@@ -22,7 +22,7 @@
             </li>
             {% if mode == 'listeContacts'%}
                 <li class="list-group-item"> 
-                    <a href="{{path('ficheCategorie', {'id': leContact.categorie.id})}}">
+                    <a href="{{path('ficheCategorie', {'id': leContact.categorie.id, 'prevCont': leContact.id})}}">
                         {{leContact.categorie.libelle}}
                     </a>
                 </li>

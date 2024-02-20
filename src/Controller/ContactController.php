@@ -19,7 +19,6 @@ class ContactController extends AbstractController
         #{$manager = $this->getDoctrine()->getManager();#}
         #{$repo =  $manager->getRepository(Contact::class);#}
         $Contacts = $repo->findAll();
-        
 
         return $this->render('contact/listeContacts.html.twig', [
            /* 'controller_name' => 'ContactController',*/
@@ -47,7 +46,7 @@ class ContactController extends AbstractController
         //$Contacts = $repo->findBySexe($sexe);//
         $Contacts = $repo->findBy(
             ['sexe' => $sexe],
-            ['nom'=>'ASC']
+            ['nom'=>'ASC'],
         );
         return $this->render('contact/listeContacts.html.twig', [
             'controller_name' => 'ContactController',
