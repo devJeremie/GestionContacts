@@ -3,10 +3,10 @@
         {% if leContact.sexe == 0 %}
             border-info border-2
         {% else %}
-            border-warning border-2
+            border-warning border-2 
         {% endif %}
         ">
-        <h4 class="card-title text-center">{{leContact.nom}} {{leContact.prenom}}</h4>
+        <h4 class="card-title text-center ">{{leContact.nom}} {{leContact.prenom}}</h4>
         <img style="height: auto; max-width: 200px; display: block;" src="{{leContact.avatar}}" class="avatar mx-auto my-3" alt="image avatar">
         <ul class="list-group list-group-flush">
             <li class="list-group-item">{{leContact.rue}}</li>
