@@ -9,3 +9,6 @@
 body{
     background-image: url(../asset/img/marbreNoirDore.jpg);
 }
+.cardFs{
+    font-size: 13px;
+}
